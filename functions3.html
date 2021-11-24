@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сумиране на числа в обект arguments</title>
+</head>
+<body>
+    
+<p>Съмата е <span id = "results"></span>. </p>
+
+<script>
+    function sumAllNumbers(){
+        let sum = 0;
+        for(let i = 0; i < arguments.length; i++){
+            sum += arguments[i];
+        }
+        return arguments.length + "числа е" + sum;
+    }
+    document.getElementById("results").innerHTML = sumAllNumbers(10, 5 , 53, 15);
+</script>
+</body>
+</html>
